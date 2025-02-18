@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Editor from "@monaco-editor/react";
@@ -612,6 +613,24 @@ export default function Home() {
               )}
             </div>
           </div>
+        </div>
+        {/* Centered Image */}
+        <div className="flex-grow flex justify-center items-center">
+          Made with{" "}
+          <a
+            href="https://www.superflex.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <Image
+              src="/superflexai_img_reduced.png"
+              alt="Superflex AI"
+              width={100} // Adjust width as needed
+              height={100} // Adjust height as needed
+              className="object-contain ml-2"
+            />
+          </a>
         </div>
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
